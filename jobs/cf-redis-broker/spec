@@ -146,6 +146,10 @@ properties:
     default: 600
   redis.broker.service_instance_limit:
     description: The maximum number of instances allowed
+  redis.broker.shared_max_port:
+    description: Max port range
+  redis.broker.shared_min_port:
+    description: Min port range
   redis.broker.auth.username:
     default: admin
     description: The username for HTTP Basic Auth on the Broker, also used for the agent
