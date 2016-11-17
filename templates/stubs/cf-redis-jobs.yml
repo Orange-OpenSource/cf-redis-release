@@ -145,8 +145,8 @@ base_jobs:
       host: (( .properties.redis.broker.route_name "." .meta.apps_domain ))
       username: (( .properties.redis.broker.auth.username ))
       password: (( .properties.redis.broker.auth.password ))
-  vm_type: (( .meta.vm_type || default  ))
-  stemcell: (( .meta.stemcell || trusty  ))
+  vm_type: (( .meta.vm_type   ))
+  stemcell: (( .meta.stemcell   ))
   azs: [z1]
   templates: (( job_templates.broker_registrar additional_job_templates.broker_registrar ))
   <<: (( merge ))
@@ -161,8 +161,8 @@ base_jobs:
       host: (( .properties.redis.broker.route_name "." .meta.apps_domain ))
       username: (( .properties.redis.broker.auth.username ))
       password: (( .properties.redis.broker.auth.password ))
-  vm_type: (( .meta.vm_type || default  ))
-  stemcell: (( .meta.stemcell || trusty  ))
+  vm_type: (( .meta.vm_type   ))
+  stemcell: (( .meta.stemcell  ))
   azs: [z1]
   templates: (( job_templates.broker_deregistrar additional_job_templates.broker_deregistrar ))
   <<: (( merge ))
@@ -171,8 +171,8 @@ base_jobs:
   name: smoke-tests
   networks:
   - name: (( .networks.[0].name )) 
-  vm_type: (( .meta.vm_type || default  ))
-  stemcell: (( .meta.stemcell || trusty  ))
+  vm_type: (( .meta.vm_type   ))
+  stemcell: (( .meta.stemcell ))
   azs: [z1]
   templates: (( job_templates.smoke_tests additional_job_templates.smoke_tests ))
   <<: (( merge ))

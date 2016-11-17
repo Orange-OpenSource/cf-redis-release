@@ -17,7 +17,7 @@ compilation:
 stemcells:
  - alias: trusty
    os: ubuntu-trusty
-   version: latest
+   version: REPLACE_WITH_STEMCELL_VERSION
 
 
 
