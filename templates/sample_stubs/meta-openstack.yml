@@ -17,15 +17,14 @@ meta:
     admin_username: REPLACE_WITH_ADMIN_USERNAME
     admin_password: REPLACE_WITH_ADMIN_PASSWORD
     api_url: (( "https://api" "." .meta.external_domain ))
-    apps_domain: (( .meta.apps_domain ))
-    system_domain: (( .meta.external_domain ))
-    skip_ssl_validation: false # Optional, change to `true` in envs with self-signed SSL certs
+    system_domain: (( .meta.apps_domain ))
+    apps_domain: (( .meta.external_domain ))
   nats:
-    machines:
-    - REPLACE_WITH_NATS_MACHINES_HOST
-    password: REPLACE_WITH_NATS_PASSWORD
-    port: REPLACE_WITH_NATS_PORT
-    user: REPLACE_WITH_NATS_USERNAME
+      machines:
+      - REPLACE_WITH_NATS_MACHINES_HOST
+      password: REPLACE_WITH_NATS_PASSWORD
+      port: REPLACE_WITH_NATS_PORT
+      user: REPLACE_WITH_NATS_USERNAME
   service_name: redis
   route_name: redis-broker
   redis:
@@ -43,3 +42,9 @@ meta:
     config_command: configalias
     save_command: anotherrandomstring
     bg_save_command: yetanotherrandomstring
+
+  vm_type: REPLACE_WITH_VM_TYPE
+  stemcell: trusty
+  azs: [z1]
+
+
