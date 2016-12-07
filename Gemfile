@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 gem 'aws-sdk'
-gem 'bosh_cli'
+gem 'bosh_cli' '1.3262.24.0'
 gem 'redis'
 gem 'rake'
 gem 'process_helper'
